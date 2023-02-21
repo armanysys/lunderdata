@@ -421,6 +421,28 @@ estado_lista =  [
       "Montos": "NR"
     },
     {
+      "Entidad": "Baja California",
+      "Denuncias": "NR",
+      "Investigaciones": "NR",
+      "Carpetas": "NR",
+      "Imputaciones": "NR",
+      "Vinculaciones": "NR",
+      "Sentencias": "NR",
+      "Judicialización": "NR",
+      "Criterio": "NR",
+      "Controversias": "NR",
+      "Suspensiónes": "NR",
+      "Procedimiento": "NR ",
+      "Reparaciónes": "NR",
+      "TotalCambate": "NR",
+      "Archivos": "NR",
+      "NoAcciónPenal": "NR",
+      "Abstenciones": "NR",
+      "TotalNoCombate": "NR",
+      "Presupuesto": "NR",
+      "Montos": "NR"
+    },
+    {
       "Entidad": "Puebla",
       "Denuncias": "1844",
       "Investigaciones": "51",
