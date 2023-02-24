@@ -1,0 +1,447 @@
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/mexicoLow.js"></script>
+
+<script src="selectestado.js"></script>
+<link rel="stylesheet" type="text/css" href="mapaStyle.css">
+</link>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/selectestado.js?v=1"></script> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/mapaStyle.css?v=1"></link> -->
+
+<div id="chartdiv"></div>
+
+<style>
+  .text-card-title {
+    font-family: Roboto;
+    font-size: 40px;
+  }
+
+  .text-title {
+    font-family: Roboto;
+    font-size: 18px;
+  }
+
+  .text-parrafo {
+    font-family: Roboto;
+    font-size: 12px;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title text-center">Aguascalientes</h4>
+      <div class="row">
+        <div class="col-sm col-lg">
+          <p class="text-center text-title"> Proceso de Investigación</p>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Denuncias recibidas</p>
+            </div>
+            <div class="col text-center" id="IdDenuncias">117</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Investigaciones de oficio iniciadas</p>
+            </div>
+            <div class="col text-center" id="idInvestigaciones">2</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Carpetas de investigación abiertas</p>
+            </div>
+            <div class="col text-center" id="idCarpetas">117</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Formulación de imputación</p>
+            </div>
+            <div class="col text-center" id="idImputaciones">18</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Vinculaciones a proceso</p>
+            </div>
+            <div class="col text-center" id="idVinculaciones">0</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Sentencias condenatorias</p>
+            </div>
+            <div class="col text-center" id="idSentencias">-</div>
+          </div>
+        </div>
+        <div class="col-md col-lg">
+          <p class="text-center text-title">Resolución de carpetas de investigación</p>
+          <div class="row">
+            <div class="col">
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Resolución de carpetas en combate a corrupción</p>
+                  <p class="text-center">Total <span id="idTotalCombate">&nbsp; &nbsp; 15%</span></p>
+                </div>                
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Judicialización</p>
+                </div>
+                <div class="col-sm text-center" id="idJudicialización">3</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Criterio de oportunidad</p>
+                </div>
+                <div class="col-sm text-center">1</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Medios alternativos de solución de controversias</p>
+                </div>
+                <div class="col text-center">5</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Suspensión condicional del proceso</p>
+                </div>
+                <div class="col text-center">-</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Procedimiento abreviado</p>
+                </div>
+                <div class="col text-center">0</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Reparación del daño</p>
+                </div>
+                <div class="col text-center">2</div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Resolución de carpetas que no combaten la corrupción</p>
+                  <p class="text-center">Total <span>&nbsp; &nbsp; 70%</span></p>
+                </div>                
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Archivo temporal</p>
+                </div>
+                <div class="col text-center">9</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>No ejercicio de la acción penal</p>
+                </div>
+                <div class="col text-center">23</div>
+              </div>
+              <div class="row text-parrafo">
+                <div class="col text-left">
+                  <p>Facultad de abstenerse de investigar</p>
+                </div>
+                <div class="col text-center">9</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-lg">
+          <p class="text-center text-title">Presupuesto y monto</p>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Presupuesto otorgado</p>
+            </div>
+            <div class="col text-center">$12,340,000</div>
+          </div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Monto recuperado</p>
+            </div>
+            <div class="col text-center">$$50,670</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="container">
+
+  <div class=e946_111394><span class="e946_111395" id="idEntidad">Aguascalientes</span>
+    <div class=e946_111396>
+      <div class=e946_111397>
+        <div class=e946_111398><span class="e946_111399">Proceso de Investigación</span></div>
+        <p class=e946_111400><span class="e946_111401">Denuncias recibidas</span><span class="e946_111402" id="IdDenuncias">117</span>
+      </div>
+      <div class=e946_111403><span class="e946_111404">Inestigaciones de oficio iniciadas</span><span
+          class="e946_111405" id="idInvestigaciones">2</span></div>
+      <div class=e946_111406><span class="e946_111407">Carpetas de investigación abiertas</span><span
+          class="e946_111408" id="idCarpetas">117</span></div>
+      <div class=e946_111409><span class="e946_111410">Formulación de imputación</span><span class="e946_111411"
+          id="idImputaciones">18</span></div>
+      <div class=e946_111412><span class="e946_111413">Vinculaciones a proceso</span><span class="e946_111414"
+          id="idVinculaciones">0</span></div>
+      <div class=e946_111415><span class="e946_111416">Sentencias condenatorias</span><span class="e946_111417"
+          id="idSentencias">-</span></div>
+    </div>
+    <div class="e946_111418"></div>
+    <div class=e946_111419>
+      <div class=e946_111420><span class="e946_111421">Resolución de carpetas de investigación</span>
+        <div class=e946_111422>
+          <div class=e946_111423>
+            <div class=e946_111424><span class="e946_111425">Resolución de carpetas en combate a corrupción</span>
+            </div>
+            <div class=e946_111426><span class="e946_111427">Total</span><span class="e946_111428"
+                id="idTotalCombate">15%</span></div>
+            <div class=e946_111429><span class="e946_111430">Judicialización</span><span class="e946_111431"
+                id="idJudicialización">3</span>
+            </div>
+            <div class=e946_111432><span class="e946_111433">Criterio de oportunidad</span><span class="e946_111434"
+                id="idCriterios">1</span></div>
+            <div class=e946_111435><span class="e946_111436">Medios alternativos de solución de
+                controversias</span><span class="e946_111437" id="idControversias">5</span></div>
+            <div class=e946_111438><span class="e946_111439">Suspensión condicional del proceso</span><span
+                class="e946_111440" id="idSuspencion">-</span></div>
+            <div class=e946_111441><span class="e946_111442">Procedimiento abreviado</span><span class="e946_111443"
+                id="idProcedimiento">0</span></div>
+            <div class=e946_111444><span class="e946_111445">Reparación del daño</span><span class="e946_111446"
+                id="idReparacion">2</span></div>
+          </div>
+          <div class=e946_111447>
+            <div class=e946_111448><span class="e946_111449">Resolución de carpetas que no combaten la
+                corrupción</span></div>
+            <div class=e946_111450><span class="e946_111451">Total</span><span class="e946_111452"
+                id="idTotalNoCombate">70%</span></div>
+            <div class=e946_111453><span class="e946_111454">Archivo temporal</span><span class="e946_111455"
+                id="idArchivo">9</span>
+            </div>
+            <div class=e946_111456><span class="e946_111457">No ejercicio de la acción penal</span><span
+                class="e946_111458" id="idAcccionPenal">23</span></div>
+            <div class=e946_111459><span class="e946_111460">Facultad de abstenerse de investigar</span><span
+                class="e946_111461" id="idAbstenciones">9</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="e946_111462"></div>
+    <div class=e946_111463>
+      <div class=e946_111464><span class="e946_111465">Presupuesto y monto</span></div>
+      <div class=e946_111466>
+        <div class=e946_111467><span class="e946_111468">Presupuesto otorgado</span><span class="e946_111469"
+            id="idPresupuesto">$12,340,000</span></div>
+      </div>
+      <div class=e946_111470><span class="e946_111471">Monto recuperado</span><span class="e946_111472"
+          id="idMonto">$50,670</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+  am4core.useTheme(am4themes_animated);
+
+  var chart = am4core.create("chartdiv", am4maps.MapChart);
+  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in 
+
+  chart.geodata = am4geodata_mexicoLow;
+  chart.projection = new am4maps.projections.Miller();
+
+  var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+  var polygonTemplate = polygonSeries.mapPolygons.template;
+  polygonTemplate.tooltipText = "{name}:  \n \t {value.value.formatNumber('#')}/12";
+  polygonSeries.heatRules.push({
+    property: "fill",
+    target: polygonSeries.mapPolygons.template,
+    min: am4core.color("#ffffff"),
+    max: am4core.color("#FEC23B")
+  });
+  polygonSeries.useGeodata = true;
+
+  //disable zoom
+  chart.chartContainer.wheelable = false;
+  chart.seriesContainer.events.disableType("doublehit");
+  chart.chartContainer.background.events.disableType("doublehit");
+  // add heat legend 
+  var heatLegend = chart.chartContainer.createChild(am4maps.HeatLegend);
+  heatLegend.valign = "bottom";
+  heatLegend.align = "center";
+  heatLegend.width = am4core.percent(75);
+  heatLegend.series = polygonSeries;
+  heatLegend.orientation = "horizontal";
+  heatLegend.padding(20, 20, 20, 20);
+  heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
+  heatLegend.valueAxis.renderer.minGridDistance = 40;
+
+
+  polygonSeries.mapPolygons.template.events.on("over", event => {
+    handleHover(event.target);
+  });
+
+  polygonSeries.mapPolygons.template.events.on("hit", event => {
+    let estad_name = event.target.dataItem._dataContext.name;
+    select_estado(estad_name);
+    handleHover(event.target);
+  });
+
+  function handleHover(mapPolygon) {
+    if (!isNaN(mapPolygon.dataItem.value)) {
+      heatLegend.valueAxis.showTooltipAt(mapPolygon.dataItem.value);
+    } else {
+      heatLegend.valueAxis.hideTooltip();
+    }
+  }
+
+  polygonSeries.mapPolygons.template.strokeOpacity = 0.4;
+  polygonSeries.mapPolygons.template.events.on("out", event => {
+    heatLegend.valueAxis.hideTooltip();
+  });
+  // data 
+  polygonSeries.data = [
+    {
+      id: "MX-ZAC",
+      value: 4
+    },
+    {
+      id: "MX-YUC",
+      value: 7
+    },
+    {
+      id: "MX-VER",
+      value: 10
+    },
+    {
+      id: "MX-TLA",
+      value: 7
+    },
+    {
+      id: "MX-TAM",
+      value: 8
+    },
+    {
+      id: "MX-TAB",
+      value: 3
+    },
+    {
+      id: "MX-SON",
+      value: 6
+    },
+    {
+      id: "MX-SIN",
+      value: 9
+    },
+    {
+      id: "MX-SLP",
+      value: 5
+    },
+    {
+      id: "MX-ROO",
+      value: 3
+    },
+    {
+      id: "MX-QUE",
+      value: 6
+    },
+    {
+      id: "MX-PUE",
+      value: 3
+    },
+    {
+      id: "MX-OAX",
+      value: 2
+    },
+    {
+      id: "MX-NLE",
+      value: 9
+    },
+    {
+      id: "MX-NAY",
+      value: 2
+    },
+    {
+      id: "MX-MOR",
+      value: 3
+    },
+    {
+      id: "MX-MIC",
+      value: 6
+    },
+    {
+      id: "MX-MEX",
+      value: 4
+    },
+    {
+      id: "MX-JAL",
+      value: 10
+    },
+    {
+      id: "MX-HID",
+      value: 3
+    },
+    {
+      id: "MX-GRO",
+      value: 5
+    },
+    {
+      id: "MX-GUA",
+      value: 9
+    },
+    {
+      id: "MX-DUR",
+      value: 7
+    },
+    {
+      id: "MX-CMX",
+      value: 2
+    },
+    {
+      id: "MX-COL",
+      value: 7
+    },
+    {
+      id: "MX-COA",
+      value: 9
+    },
+    {
+      id: "MX-CHH",
+      value: 7
+    },
+    {
+      id: "MX-CHP",
+      value: 1
+    },
+    {
+      id: "MX-CAM",
+      value: 10
+    },
+    {
+      id: "MX-BCS",
+      value: 2
+    },
+    {
+      id: "MX-BCN",
+      value: 3
+    },
+    {
+      id: "MX-AGU",
+      value: 8
+    }
+  ];
+</script>
