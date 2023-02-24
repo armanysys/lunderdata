@@ -3,26 +3,15 @@
 <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/geodata/mexicoLow.js"></script>
-
-<!-- <script src="selectestado.js"></script>
-<link rel="stylesheet" type="text/css" href="mapaStyle.css">
-</link> -->
-
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/selectestado.js?v=1"></script> -->
  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/mapaStyle.css?v=1"></link>
-
 <div id="chartdiv"></div>
-
 <div class="container-fluid">
   <div class="card">
     <div class="card-body">
@@ -30,40 +19,27 @@
       <div class="row">
         <div class="col-sm col-lg">
           <p class="text-center text-title"> Proceso de Investigación</p>
-          <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Denuncias recibidas</p>
-            </div>
-            <div class="col text-center" id="IdDenuncias">117</div>
+          <div class="row text-parrafo"><div class="col text-left"><p>Denuncias recibidas</p>
+            </div><div class="col text-center" id="IdDenuncias">117</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Investigaciones de oficio iniciadas</p>
-            </div>
+            <div class="col text-left"><p>Investigaciones de oficio iniciadas</p></div>
             <div class="col text-center" id="idInvestigaciones">2</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Carpetas de investigación abiertas</p>
-            </div>
+            <div class="col text-left"><p>Carpetas de investigación abiertas</p></div>
             <div class="col text-center" id="idCarpetas">117</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Formulación de imputación</p>
-            </div>
+            <div class="col text-left"><p>Formulación de imputación</p></div>
             <div class="col text-center" id="idImputaciones">18</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Vinculaciones a proceso</p>
-            </div>
+            <div class="col text-left"><p>Vinculaciones a proceso</p></div>
             <div class="col text-center" id="idVinculaciones">0</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Sentencias condenatorias</p>
-            </div>
+            <div class="col text-left"><p>Sentencias condenatorias</p></div>
             <div class="col text-center" id="idSentencias">-</div>
           </div>
         </div>
@@ -84,33 +60,23 @@
                 <div class="col-sm text-center" id="idJudicialización">3</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Criterio de oportunidad</p>
-                </div>
+                <div class="col text-left"><p>Criterio de oportunidad</p></div>
                 <div class="col-sm text-center" id="idCriterios">1</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Medios alternativos de solución de controversias</p>
-                </div>
+                <div class="col text-left"><p>Medios alternativos de solución de controversias</p></div>
                 <div class="col text-center" id="idControversias">5</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Suspensión condicional del proceso</p>
-                </div>
+                <div class="col text-left"><p>Suspensión condicional del proceso</p></div>
                 <div class="col text-center" id="idSuspencion">-</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Procedimiento abreviado</p>
-                </div>
+                <div class="col text-left"><p>Procedimiento abreviado</p></div>
                 <div class="col text-center" id="idProcedimiento">0</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Reparación del daño</p>
-                </div>
+                <div class="col text-left"><p>Reparación del daño</p></div>
                 <div class="col text-center" id="idReparacion">2</div>
               </div>
             </div>
@@ -122,21 +88,15 @@
                 </div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Archivo temporal</p>
-                </div>
+                <div class="col text-left"><p>Archivo temporal</p></div>
                 <div class="col text-center" id="idArchivo">9</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>No ejercicio de la acción penal</p>
-                </div>
+                <div class="col text-left"><p>No ejercicio de la acción penal</p></div>
                 <div class="col text-center" id="idAcccionPenal">23</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left">
-                  <p>Facultad de abstenerse de investigar</p>
-                </div>
+                <div class="col text-left"><p>Facultad de abstenerse de investigar</p></div>
                 <div class="col text-center" id="idAbstenciones">9</div>
               </div>
 
@@ -146,15 +106,11 @@
         <div class="col-sm col-lg">
           <p class="text-center text-title">Presupuesto y monto</p>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Presupuesto otorgado</p>
-            </div>
+            <div class="col text-left"><p>Presupuesto otorgado</p></div>
             <div class="col text-center" id="idPresupuesto">$12,340,000</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left">
-              <p>Monto recuperado</p>
-            </div>
+            <div class="col text-left"><p>Monto recuperado</p></div>
             <div class="col text-center" id="idMonto">$$50,670</div>
           </div>
         </div>
@@ -163,12 +119,8 @@
   </div>
 </div>
 
-
 <div id="container">
-
 </div>
-
-
 <script>
   am4core.useTheme(am4themes_animated);
 

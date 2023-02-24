@@ -1,8 +1,6 @@
-
 function select_estado(idEstado) {
-  console.log(idEstado)
     let info_estado = estado_lista.find(x => x.Entidad === idEstado)
-    console.log(info_estado)
+
     document.getElementById("idEntidad").innerText = info_estado.Entidad;
     document.getElementById("IdDenuncias").innerText = info_estado.Denuncias;
     document.getElementById("idInvestigaciones").innerText = info_estado.Investigaciones;
