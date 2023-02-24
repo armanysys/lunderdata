@@ -23,27 +23,10 @@
 
 <div id="chartdiv"></div>
 
-<style>
-  .text-card-title {
-    font-family: Roboto;
-    font-size: 40px;
-  }
-
-  .text-title {
-    font-family: Roboto;
-    font-size: 18px;
-  }
-
-  .text-parrafo {
-    font-family: Roboto;
-    font-size: 12px;
-  }
-</style>
-
 <div class="container-fluid">
   <div class="card">
     <div class="card-body">
-      <h4 class="card-title text-center">Aguascalientes</h4>
+      <h4 class="card-title text-center" id="idEntidad">Aguascalientes</h4>
       <div class="row">
         <div class="col-sm col-lg">
           <p class="text-center text-title"> Proceso de Investigación</p>
@@ -92,7 +75,7 @@
                 <div class="col text-left">
                   <p>Resolución de carpetas en combate a corrupción</p>
                   <p class="text-center">Total <span id="idTotalCombate">&nbsp; &nbsp; 15%</span></p>
-                </div>                
+                </div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
@@ -104,57 +87,57 @@
                 <div class="col text-left">
                   <p>Criterio de oportunidad</p>
                 </div>
-                <div class="col-sm text-center">1</div>
+                <div class="col-sm text-center" id="idCriterios">1</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Medios alternativos de solución de controversias</p>
                 </div>
-                <div class="col text-center">5</div>
+                <div class="col text-center" id="idControversias">5</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Suspensión condicional del proceso</p>
                 </div>
-                <div class="col text-center">-</div>
+                <div class="col text-center" id="idSuspencion">-</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Procedimiento abreviado</p>
                 </div>
-                <div class="col text-center">0</div>
+                <div class="col text-center" id="idProcedimiento">0</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Reparación del daño</p>
                 </div>
-                <div class="col text-center">2</div>
+                <div class="col text-center" id="idReparacion">2</div>
               </div>
             </div>
             <div class="col">
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Resolución de carpetas que no combaten la corrupción</p>
-                  <p class="text-center">Total <span>&nbsp; &nbsp; 70%</span></p>
-                </div>                
+                  <p class="text-center">Total <span id="idTotalNoCombate">&nbsp; &nbsp; 70%</span></p>
+                </div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Archivo temporal</p>
                 </div>
-                <div class="col text-center">9</div>
+                <div class="col text-center" id="idArchivo">9</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>No ejercicio de la acción penal</p>
                 </div>
-                <div class="col text-center">23</div>
+                <div class="col text-center" id="idAcccionPenal">23</div>
               </div>
               <div class="row text-parrafo">
                 <div class="col text-left">
                   <p>Facultad de abstenerse de investigar</p>
                 </div>
-                <div class="col text-center">9</div>
+                <div class="col text-center" id="idAbstenciones">9</div>
               </div>
 
             </div>
@@ -166,13 +149,13 @@
             <div class="col text-left">
               <p>Presupuesto otorgado</p>
             </div>
-            <div class="col text-center">$12,340,000</div>
+            <div class="col text-center" id="idPresupuesto">$12,340,000</div>
           </div>
           <div class="row text-parrafo">
             <div class="col text-left">
               <p>Monto recuperado</p>
             </div>
-            <div class="col text-center">$$50,670</div>
+            <div class="col text-center" id="idMonto">$$50,670</div>
           </div>
         </div>
       </div>
@@ -183,77 +166,8 @@
 
 <div id="container">
 
-  <div class=e946_111394><span class="e946_111395" id="idEntidad">Aguascalientes</span>
-    <div class=e946_111396>
-      <div class=e946_111397>
-        <div class=e946_111398><span class="e946_111399">Proceso de Investigación</span></div>
-        <p class=e946_111400><span class="e946_111401">Denuncias recibidas</span><span class="e946_111402" id="IdDenuncias">117</span>
-      </div>
-      <div class=e946_111403><span class="e946_111404">Inestigaciones de oficio iniciadas</span><span
-          class="e946_111405" id="idInvestigaciones">2</span></div>
-      <div class=e946_111406><span class="e946_111407">Carpetas de investigación abiertas</span><span
-          class="e946_111408" id="idCarpetas">117</span></div>
-      <div class=e946_111409><span class="e946_111410">Formulación de imputación</span><span class="e946_111411"
-          id="idImputaciones">18</span></div>
-      <div class=e946_111412><span class="e946_111413">Vinculaciones a proceso</span><span class="e946_111414"
-          id="idVinculaciones">0</span></div>
-      <div class=e946_111415><span class="e946_111416">Sentencias condenatorias</span><span class="e946_111417"
-          id="idSentencias">-</span></div>
-    </div>
-    <div class="e946_111418"></div>
-    <div class=e946_111419>
-      <div class=e946_111420><span class="e946_111421">Resolución de carpetas de investigación</span>
-        <div class=e946_111422>
-          <div class=e946_111423>
-            <div class=e946_111424><span class="e946_111425">Resolución de carpetas en combate a corrupción</span>
-            </div>
-            <div class=e946_111426><span class="e946_111427">Total</span><span class="e946_111428"
-                id="idTotalCombate">15%</span></div>
-            <div class=e946_111429><span class="e946_111430">Judicialización</span><span class="e946_111431"
-                id="idJudicialización">3</span>
-            </div>
-            <div class=e946_111432><span class="e946_111433">Criterio de oportunidad</span><span class="e946_111434"
-                id="idCriterios">1</span></div>
-            <div class=e946_111435><span class="e946_111436">Medios alternativos de solución de
-                controversias</span><span class="e946_111437" id="idControversias">5</span></div>
-            <div class=e946_111438><span class="e946_111439">Suspensión condicional del proceso</span><span
-                class="e946_111440" id="idSuspencion">-</span></div>
-            <div class=e946_111441><span class="e946_111442">Procedimiento abreviado</span><span class="e946_111443"
-                id="idProcedimiento">0</span></div>
-            <div class=e946_111444><span class="e946_111445">Reparación del daño</span><span class="e946_111446"
-                id="idReparacion">2</span></div>
-          </div>
-          <div class=e946_111447>
-            <div class=e946_111448><span class="e946_111449">Resolución de carpetas que no combaten la
-                corrupción</span></div>
-            <div class=e946_111450><span class="e946_111451">Total</span><span class="e946_111452"
-                id="idTotalNoCombate">70%</span></div>
-            <div class=e946_111453><span class="e946_111454">Archivo temporal</span><span class="e946_111455"
-                id="idArchivo">9</span>
-            </div>
-            <div class=e946_111456><span class="e946_111457">No ejercicio de la acción penal</span><span
-                class="e946_111458" id="idAcccionPenal">23</span></div>
-            <div class=e946_111459><span class="e946_111460">Facultad de abstenerse de investigar</span><span
-                class="e946_111461" id="idAbstenciones">9</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="e946_111462"></div>
-    <div class=e946_111463>
-      <div class=e946_111464><span class="e946_111465">Presupuesto y monto</span></div>
-      <div class=e946_111466>
-        <div class=e946_111467><span class="e946_111468">Presupuesto otorgado</span><span class="e946_111469"
-            id="idPresupuesto">$12,340,000</span></div>
-      </div>
-      <div class=e946_111470><span class="e946_111471">Monto recuperado</span><span class="e946_111472"
-          id="idMonto">$50,670</span>
-      </div>
-    </div>
-  </div>
 </div>
 
-</div>
 
 <script>
   am4core.useTheme(am4themes_animated);
