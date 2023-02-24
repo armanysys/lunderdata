@@ -6,6 +6,7 @@ body {
 #chartdiv {
   width: 100%;
   height: 500px;
+  padding-bottom: 50px;
 }
 
 .text-card-title {
