@@ -29,13 +29,17 @@ body {
   font-family: Roboto;
   font-size: 16px;
 }
+#mapasvg{
+  position: relative;
+  width: 100%;
+}
 
 #icon-federal{
   width: 8%;
   height: 50%;            
   position: absolute;
-  top: 48%;
-  left: 20%;
+  top: 65%;
+  left: 10%;
   opacity: 1;  /* for demo purpose  */
 }
 
