@@ -1,0 +1,80 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding-bottom: 50px;
+}
+
+.text-card-title {
+  font-family: Roboto;
+  font-size: 40px;
+}
+
+.text-title {
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+.text-parrafo {
+  font-family: Roboto;
+  font-size: 12px;
+}
+
+.text-parrafo-federal {
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+#icon-federal{
+  width: 8%;
+  height: 50%;            
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  opacity: 1;  /* for demo purpose  */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #F2C96B;
+  color:black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 103%;
+  left: 34%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font: Roboto;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

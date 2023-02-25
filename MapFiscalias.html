@@ -10,8 +10,32 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/selectestado001.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/mapaStyle003.css"></link>
-<div id="chartdiv"></div>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/mapaStyle004.css">
+<div id="mapasvg">
+  <div id="chartdiv"></div>
+  <div id="icon-federal" onclick="select_estado('Federal')" class="tooltip"> 
+    <span class="tooltiptext">Federal: <br> 10/12</span>
+    <svg  width="68" height="50" viewBox="0 0 46 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="7.26465" y="12.0029" width="5.5807" height="18.6536" fill="#B6D3FB" />
+      <rect x="15.7246" y="12.0029" width="5.5807" height="18.6536" fill="#B6D3FB" />
+      <rect x="24.1919" y="12.0029" width="5.5807" height="18.6536" fill="#B6D3FB" />
+      <rect x="32.6475" y="12.0029" width="5.5807" height="18.6536" fill="#B6D3FB" />
+      <path d="M22.7456 0L42.4438 9.0007H3.04733L22.7456 0Z" fill="#092D5C" />
+      <rect x="3.22119" y="8.99902" width="39.0649" height="3.00023" fill="#B6D3FB" />
+      <rect x="7.26465" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="24.1919" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="15.7246" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="32.6475" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="11" y="13" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="27.7407" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="19.2788" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="36.1982" y="13.3086" width="2.02935" height="16.0447" fill="#77A0D7" />
+      <rect x="3.22119" y="30.6523" width="39.0649" height="3.00023" fill="#B6D3FB" />
+      <ellipse cx="22.737" cy="5.28095" rx="1.61252" ry="1.63056" fill="#DEE9FF" />
+    </svg>
+    <p class="text-parrafo-federal">Federal </p>
+  </div>
+</div>
 <div class="container-fluid">
   <div class="card">
     <div class="card-body">
@@ -19,27 +43,40 @@
       <div class="row">
         <div class="col-sm col-lg">
           <p class="text-center text-title"> Proceso de Investigación</p>
-          <div class="row text-parrafo"><div class="col text-left"><p>Denuncias recibidas</p>
-            </div><div class="col text-center" id="IdDenuncias">117</div>
+          <div class="row text-parrafo">
+            <div class="col text-left">
+              <p>Denuncias recibidas</p>
+            </div>
+            <div class="col text-center" id="IdDenuncias">117</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Investigaciones de oficio iniciadas</p></div>
+            <div class="col text-left">
+              <p>Investigaciones de oficio iniciadas</p>
+            </div>
             <div class="col text-center" id="idInvestigaciones">2</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Carpetas de investigación abiertas</p></div>
+            <div class="col text-left">
+              <p>Carpetas de investigación abiertas</p>
+            </div>
             <div class="col text-center" id="idCarpetas">117</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Formulación de imputación</p></div>
+            <div class="col text-left">
+              <p>Formulación de imputación</p>
+            </div>
             <div class="col text-center" id="idImputaciones">18</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Vinculaciones a proceso</p></div>
+            <div class="col text-left">
+              <p>Vinculaciones a proceso</p>
+            </div>
             <div class="col text-center" id="idVinculaciones">0</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Sentencias condenatorias</p></div>
+            <div class="col text-left">
+              <p>Sentencias condenatorias</p>
+            </div>
             <div class="col text-center" id="idSentencias">-</div>
           </div>
         </div>
@@ -60,23 +97,33 @@
                 <div class="col-sm text-center" id="idJudicialización">3</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Criterio de oportunidad</p></div>
+                <div class="col text-left">
+                  <p>Criterio de oportunidad</p>
+                </div>
                 <div class="col-sm text-center" id="idCriterios">1</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Medios alternativos de solución de controversias</p></div>
+                <div class="col text-left">
+                  <p>Medios alternativos de solución de controversias</p>
+                </div>
                 <div class="col text-center" id="idControversias">5</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Suspensión condicional del proceso</p></div>
+                <div class="col text-left">
+                  <p>Suspensión condicional del proceso</p>
+                </div>
                 <div class="col text-center" id="idSuspencion">-</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Procedimiento abreviado</p></div>
+                <div class="col text-left">
+                  <p>Procedimiento abreviado</p>
+                </div>
                 <div class="col text-center" id="idProcedimiento">0</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Reparación del daño</p></div>
+                <div class="col text-left">
+                  <p>Reparación del daño</p>
+                </div>
                 <div class="col text-center" id="idReparacion">2</div>
               </div>
             </div>
@@ -88,15 +135,21 @@
                 </div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Archivo temporal</p></div>
+                <div class="col text-left">
+                  <p>Archivo temporal</p>
+                </div>
                 <div class="col text-center" id="idArchivo">9</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>No ejercicio de la acción penal</p></div>
+                <div class="col text-left">
+                  <p>No ejercicio de la acción penal</p>
+                </div>
                 <div class="col text-center" id="idAcccionPenal">23</div>
               </div>
               <div class="row text-parrafo">
-                <div class="col text-left"><p>Facultad de abstenerse de investigar</p></div>
+                <div class="col text-left">
+                  <p>Facultad de abstenerse de investigar</p>
+                </div>
                 <div class="col text-center" id="idAbstenciones">9</div>
               </div>
 
@@ -106,11 +159,15 @@
         <div class="col-sm col-lg">
           <p class="text-center text-title">Presupuesto y monto</p>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Presupuesto otorgado</p></div>
+            <div class="col text-left">
+              <p>Presupuesto otorgado</p>
+            </div>
             <div class="col text-center" id="idPresupuesto">$12,340,000</div>
           </div>
           <div class="row text-parrafo">
-            <div class="col text-left"><p>Monto recuperado</p></div>
+            <div class="col text-left">
+              <p>Monto recuperado</p>
+            </div>
             <div class="col text-center" id="idMonto">$$50,670</div>
           </div>
         </div>
@@ -118,198 +175,4 @@
     </div>
   </div>
 </div>
-
-<div id="container">
-</div>
-<script>
-  am4core.useTheme(am4themes_animated);
-
-  var chart = am4core.create("chartdiv", am4maps.MapChart);
-  chart.dragGrip.disabled = true;
-  chart.seriesContainer.inert = false;
-  chart.hiddenState.properties.opacity = 0; // this creates initial fade-in 
-
-  chart.geodata = am4geodata_mexicoLow;
-  chart.projection = new am4maps.projections.Miller();
-
-  var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-  var polygonTemplate = polygonSeries.mapPolygons.template;
-  polygonTemplate.tooltipText = "{name}:  \n \t {value.value.formatNumber('#')}/12";
-  polygonSeries.heatRules.push({
-    property: "fill",
-    target: polygonSeries.mapPolygons.template,
-    min: am4core.color("#ffffff"),
-    max: am4core.color("#FEC23B")
-  });
-  polygonSeries.useGeodata = true;
-
-  //disable zoom
-  chart.chartContainer.wheelable = false;
-  chart.seriesContainer.events.disableType("doublehit");
-  chart.chartContainer.background.events.disableType("doublehit");
-  // add heat legend 
-  var heatLegend = chart.chartContainer.createChild(am4maps.HeatLegend);
-  heatLegend.valign = "bottom";
-  heatLegend.align = "center";
-  heatLegend.width = am4core.percent(75);
-  heatLegend.series = polygonSeries;
-  heatLegend.orientation = "horizontal";
-  heatLegend.padding(20, 20, 20, 20);
-  heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
-  heatLegend.valueAxis.renderer.minGridDistance = 40;
-
-
-  polygonSeries.mapPolygons.template.events.on("over", event => {
-    handleHover(event.target);
-  });
-
-  polygonSeries.mapPolygons.template.events.on("hit", event => {
-    let estad_name = event.target.dataItem._dataContext.name;
-    select_estado(estad_name);
-    handleHover(event.target);
-  });
-
-  function handleHover(mapPolygon) {
-    if (!isNaN(mapPolygon.dataItem.value)) {
-      heatLegend.valueAxis.showTooltipAt(mapPolygon.dataItem.value);
-    } else {
-      heatLegend.valueAxis.hideTooltip();
-    }
-  }
-
-  polygonSeries.mapPolygons.template.strokeOpacity = 0.4;
-  polygonSeries.mapPolygons.template.events.on("out", event => {
-    heatLegend.valueAxis.hideTooltip();
-  });
-  // data 
-  polygonSeries.data = [
-    {
-      id: "MX-ZAC",
-      value: 4
-    },
-    {
-      id: "MX-YUC",
-      value: 7
-    },
-    {
-      id: "MX-VER",
-      value: 10
-    },
-    {
-      id: "MX-TLA",
-      value: 7
-    },
-    {
-      id: "MX-TAM",
-      value: 8
-    },
-    {
-      id: "MX-TAB",
-      value: 3
-    },
-    {
-      id: "MX-SON",
-      value: 6
-    },
-    {
-      id: "MX-SIN",
-      value: 9
-    },
-    {
-      id: "MX-SLP",
-      value: 5
-    },
-    {
-      id: "MX-ROO",
-      value: 3
-    },
-    {
-      id: "MX-QUE",
-      value: 6
-    },
-    {
-      id: "MX-PUE",
-      value: 3
-    },
-    {
-      id: "MX-OAX",
-      value: 2
-    },
-    {
-      id: "MX-NLE",
-      value: 9
-    },
-    {
-      id: "MX-NAY",
-      value: 2
-    },
-    {
-      id: "MX-MOR",
-      value: 3
-    },
-    {
-      id: "MX-MIC",
-      value: 6
-    },
-    {
-      id: "MX-MEX",
-      value: 4
-    },
-    {
-      id: "MX-JAL",
-      value: 10
-    },
-    {
-      id: "MX-HID",
-      value: 3
-    },
-    {
-      id: "MX-GRO",
-      value: 5
-    },
-    {
-      id: "MX-GUA",
-      value: 9
-    },
-    {
-      id: "MX-DUR",
-      value: 7
-    },
-    {
-      id: "MX-CMX",
-      value: 2
-    },
-    {
-      id: "MX-COL",
-      value: 7
-    },
-    {
-      id: "MX-COA",
-      value: 9
-    },
-    {
-      id: "MX-CHH",
-      value: 7
-    },
-    {
-      id: "MX-CHP",
-      value: 1
-    },
-    {
-      id: "MX-CAM",
-      value: 10
-    },
-    {
-      id: "MX-BCS",
-      value: 2
-    },
-    {
-      id: "MX-BCN",
-      value: 3
-    },
-    {
-      id: "MX-AGU",
-      value: 8
-    }
-  ];
-</script>
+<script src="https://cdn.jsdelivr.net/gh/armanysys/lunderdata/mapevents.js"></script>
