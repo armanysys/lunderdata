@@ -1,0 +1,142 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#chartdiv {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  padding-bottom: 50px;
+}
+
+.border-card {
+  border: none;
+  box-shadow: 0px 100px 80px rgb(0 0 0 / 7%);
+}
+
+.text-card-title {
+  color: rgba(0, 0, 0, 1);
+  font-family: Roboto;
+  font-size: 40px;
+  text-align: center;
+}
+
+.text-title {
+  color: rgba(0, 2.000000118277967, 24.000000469386578, 1);
+  font-family: Roboto;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0;
+}
+
+.format-parrafo{
+  display: flex; 
+  justify-content: space-between;
+}
+
+.text-parrafo {
+  color: rgba(0, 2.000000118277967, 24.000000469386578, 1);
+  font-family: Roboto;
+  text-align: left;
+  letter-spacing: 0.4000000059604645;
+  font-size: 12px;
+}
+
+.text-number {
+  color: rgba(0, 2.000000118277967, 24.000000469386578, 1);
+  font-family: Roboto;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.text-parrafo-subtitulo {
+  color: rgba(0, 2.000000118277967, 24.000000469386578, 1);
+  left: 8px;
+  top: 0px;
+  font-family: Roboto;
+  text-align: left;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.text-total-green {
+  color: rgba(2.696092128753662, 92.43750303983688, 22.4392057210207, 1);
+  left: 0px;
+  top: 0px;
+  font-family: Roboto;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.text-total-red {
+  color: rgba(129.62499797344208, 0, 0, 1);
+  left: 0px;
+  top: 0px;
+  font-family: Roboto;
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.text-parrafo-federal {
+  color: rgba(0, 2.000000118277967, 24.000000469386578, 1);
+  font-family: Roboto;
+  font-size: 16px;
+}
+
+#mapasvg {
+  position: relative;
+  width: 100%;
+}
+
+#icon-federal {
+  width: 8%;
+  height: 10%;
+  position: absolute;
+  top: 65%;
+  left: 10%;
+  opacity: 1;
+  /* for demo purpose  */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #F2C96B;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 103%;
+  left: 34%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font: Roboto;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
