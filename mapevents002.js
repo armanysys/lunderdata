@@ -15,8 +15,8 @@ function init() {
   polygonSeries.heatRules.push({
     property: "fill",
     target: polygonSeries.mapPolygons.template,
-    min: am4core.color("#ffffff"),
-    max: am4core.color("#FEC23B")
+    min: am4core.color("#fff7e5"),
+    max: am4core.color("#ffb100")
   });
   polygonSeries.useGeodata = true;
 
