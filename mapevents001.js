@@ -62,7 +62,7 @@ function init() {
   polygonSeries.data = [
     {
       id: "MX-ZAC",
-      value: 4
+      value: 7
     },
     {
       id: "MX-YUC",
@@ -74,19 +74,19 @@ function init() {
     },
     {
       id: "MX-TLA",
-      value: 7
+      value: 9
     },
     {
       id: "MX-TAM",
-      value: 8
+      value: 10
     },
     {
       id: "MX-TAB",
-      value: 3
+      value: 6
     },
     {
       id: "MX-SON",
-      value: 6
+      value: 8
     },
     {
       id: "MX-SIN",
@@ -94,19 +94,19 @@ function init() {
     },
     {
       id: "MX-SLP",
-      value: 5
-    },
-    {
-      id: "MX-ROO",
-      value: 3
-    },
-    {
-      id: "MX-QUE",
       value: 6
     },
     {
+      id: "MX-ROO",
+      value: 8
+    },
+    {
+      id: "MX-QUE",
+      value: 8
+    },
+    {
       id: "MX-PUE",
-      value: 3
+      value: 9
     },
     {
       id: "MX-OAX",
@@ -114,7 +114,7 @@ function init() {
     },
     {
       id: "MX-NLE",
-      value: 9
+      value: 10
     },
     {
       id: "MX-NAY",
@@ -126,11 +126,11 @@ function init() {
     },
     {
       id: "MX-MIC",
-      value: 6
+      value: 9
     },
     {
       id: "MX-MEX",
-      value: 4
+      value: 6
     },
     {
       id: "MX-JAL",
@@ -138,11 +138,11 @@ function init() {
     },
     {
       id: "MX-HID",
-      value: 3
+      value: 8
     },
     {
       id: "MX-GRO",
-      value: 5
+      value: 8
     },
     {
       id: "MX-GUA",
@@ -150,23 +150,23 @@ function init() {
     },
     {
       id: "MX-DUR",
-      value: 7
+      value: 10
     },
     {
       id: "MX-CMX",
-      value: 2
+      value: 7
     },
     {
       id: "MX-COL",
-      value: 7
+      value: 8
     },
     {
       id: "MX-COA",
-      value: 9
+      value: 11
     },
     {
       id: "MX-CHH",
-      value: 7
+      value: 11
     },
     {
       id: "MX-CHP",
@@ -174,19 +174,19 @@ function init() {
     },
     {
       id: "MX-CAM",
-      value: 10
+      value: 9
     },
     {
       id: "MX-BCS",
-      value: 2
+      value: "NA"
     },
     {
       id: "MX-BCN",
-      value: 3
+      value: "NA"
     },
     {
       id: "MX-AGU",
-      value: 8
+      value: 11
     }
   ];
 
